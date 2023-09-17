@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * __char_write - This  writes the character c to stdout
  * @c: This is the  character to print
