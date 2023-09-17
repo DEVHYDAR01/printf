@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _write_char - This  writes the character c to stdout
+ * __char_write - This  writes the character c to stdout
  * @c: This is the  character to print
  *
  * Return: On success 1.
