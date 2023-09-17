@@ -15,4 +15,4 @@ typedef struct transform
 {
 	char *sign;
 	int (*fun)(va_list);
-}transform;
+}transform_t;
