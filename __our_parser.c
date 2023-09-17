@@ -11,5 +11,45 @@
  */
 int __our_parser(const char *format, transform_t fun_list[], va_list arg_lists)
 {
+	int k, l, int correct_value, print_chars;
 
+	print_chars = 0;
+	while (format[k] != '\0')/* Iterates through the main str*/
+	{
+		if (format[k] == '%') /*Checks for format specifiers*/
+		{
+			/*Iterates through struct to find the right func*/
+			for (l = 0; fun_list[l].sign != NULL; l++)
+			{
+				if (format[k + 1] == fun_list[l].sign[0])
+				{
+					correct_value = fun_list[l].f(arg_lists);
+					if (correct_value == -1)
+						return (-1);
+					print_chars =  print_chars +  correct_value;
+					break;
+				}
+			}
+			if (fun_list[l].sign == NULL && format[k + 1] != ' ')
+			{
+				if (format[k + 1] != '\0')
+				{
+					_char_write(format[k]);
+					_char_write(format[k + 1]);
+					print_chars = print_chars + 2;
+				}
+				else
+					return (-1);
+			}
+			k = k + 1; /*Updating i to skip format symbols*/
+		}
+		else
+		{
+			__char_write(format[k]); /*call the write function*/
+			print_chars++;
+		}
+		k++;
+	}
+	return (print_chars);
+}
 }
