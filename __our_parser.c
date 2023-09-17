@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * __our_parser - This will hold the main string with the necessary
  * parameters also to print a formatted string.
@@ -14,7 +13,7 @@ int __our_parser(const char *format, transform_t fun_list[], va_list arg_lists)
 	int k, l, int correct_value, print_chars;
 
 	print_chars = 0;
-	while (format[k] != '\0')/* looping through the main string*/
+	for (k = 0; format[k] != '\0'; k++)/* looping through the main string*/
 	{
 		if (format[k] == '%') /*Checking for the format specifiers*/
 		{
@@ -48,7 +47,6 @@ int __our_parser(const char *format, transform_t fun_list[], va_list arg_lists)
 			__char_write(format[k]); /*call of the write function*/
 			print_chars++;
 		}
-		k++;
 	}
 	return (print_chars);
 }
