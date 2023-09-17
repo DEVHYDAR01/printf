@@ -1,5 +1,5 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -15,7 +15,7 @@ typedef struct transform
 {
        char *sign;
        int (*fun)(va_list);
-}transform;
+}transform_t;
 
 int _printf(const char *format, ...);
 int __char_write(char c);
