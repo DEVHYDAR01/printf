@@ -24,3 +24,7 @@ int _printf(const char *format, ...)
 	}
 	va_start(arg_lists, format);
 
+	print_chars = parser(format, fun_list, arg_lists);
+	va_end(arg_lists);
+	return (print_chars);
+}
