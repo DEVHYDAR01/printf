@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _x - prints a binary number
- * @num: number arguements
- * @imprint: the printed characters
- * @uppercase: the uppercase equivalent
- * Return: printed charcaters
+ * _x - This will print a hex number
+ * @num: number arguements to be printed
+ * @imprint: the printed characters imprints
+ * @uppercase: the uppercase equivalent ok
+ * Return: printed charcaters returned
  */
 int _x(unsigned int num, int imprint, int uppercase)
 {
