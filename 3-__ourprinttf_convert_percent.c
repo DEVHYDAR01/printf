@@ -3,7 +3,7 @@
  * __ourprintf_char - This function will change an
  * argument to an unsigned char and
  * stores it to a buffer contained in a struct.
- * @args: This is the variadic 
+ * @args: This is the variadic
  * va_list pointing to the argument to be converted.
  * @flags: our flag modifiers.
  * @wid: our width modifier.

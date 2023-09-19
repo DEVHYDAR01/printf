@@ -8,7 +8,8 @@
  *
  * Return: The number of bytes copied is returned.
  */
-unsigned int __ourprintf_memcpy(buffer_t *output, const char *src, unsigned int n)
+unsigned int __ourprintf_memcpy(buffer_t *output,
+		const char *src, unsigned int n)
 {
 	unsigned int index;
 
@@ -42,7 +43,8 @@ void free_buffer(buffer_t *output)
 }
 
 /**
- * init_buffer - funtion that initializes a variable of struct type buffer_t.
+ * init_buffer - funtion that initializes a
+ * variable of struct type buffer_t.
  *
  * Return: it is the pointer to the initialized buffer_t.
  */

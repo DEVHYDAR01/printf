@@ -26,7 +26,8 @@ unsigned int __ourprintf_width(buffer_t *output, unsigned int printed,
 }
 
 /**
- * __ourprintf_string_width - This function will hold leading spaces to a buffer for a width modifier.
+ * __ourprintf_string_width - This function will hold
+ * leading spaces to a buffer for a width modifier.
  * @output: our buffer_t struct containing a character array.
  * @flags: our flag modifiers.
  * @wid: This is the width modifier.

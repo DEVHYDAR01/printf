@@ -29,7 +29,6 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 	/* Handle space flag */
 	if (SPACE_FLAG == 1 && d >= 0)
 		res = res + __ourprintf_memcpy(output, &space, 1);
-
 	if (prec <= 0 && NEG_FLAG == 0) /* Handle width  */
 	{
 		if (d == LONG_MIN)
@@ -50,7 +49,6 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 		/* our print negative sign when zero flag is active */
 		if (ZERO_FLAG == 1 && d < 0)
 			res = res + __ourprintf_memcpy(output, &neg, 1);
-
 		pad = (ZERO_FLAG == 1) ? '0' : ' ';
 		for (wid -= count; wid > 0; wid--)
 			res = res + __ourprintf_memcpy(output, &pad, 1);
@@ -68,7 +66,6 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 				flags, 0, prec);
 
 	res = res + __ourprintf_neg_width(output, res, flags, wid);
-
 	return (res);
 }
 /**

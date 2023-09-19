@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * __ourprintf_handler_flags - function to matche flags with corresponding values.
+ * __ourprintf_handler_flags - function to
+ * match flags with corresponding values.
  * @flag: This is a  pointer to a potential string of flags.
  * @index: it is anindex counter for the original format string.
  *
@@ -109,7 +110,8 @@ int __ourprintf_handler_width(va_list args, const char *modifier, char *index)
  * If the precision modifier is empty, zero, or negative 0.
  * Otherwise -1.
  */
-int __ourprintf_handler_precision(va_list args, const char *modifier, char *index)
+int __ourprintf_handler_precision(va_list args,
+		const char *modifier, char *index)
 {
 	int value = 0;
 
@@ -151,6 +153,8 @@ int __ourprintf_handler_precision(va_list args, const char *modifier, char *inde
  * handle_specifiers - funtion to matches a conversion specifier with
  * a corresponding conversion function.
  * @specifier: it is a pointer to a potential conversion specifier.
+ * @char: this is our char
+ * @int: this is our int
  *
  * Return: If a conversion function is matched a pointer to the function.
  * Otherwise - NULL.

@@ -46,7 +46,8 @@ unsigned int __ourprintf_sbase(buffer_t *output, long int num, char *base,
 }
 
 /**
- * __ourprintf_ubase - This function will convert an unsigned long to an inputted base and
+ * __ourprintf_ubase - This function will convert an
+ * unsigned long to an inputted base and
  * stores the result to a buffer contained in a struct.
  * @output: This is a struct buffer_t struct containing a character array.
  * @num: our unsigned long to be converted.
@@ -57,7 +58,8 @@ unsigned int __ourprintf_sbase(buffer_t *output, long int num, char *base,
  *
  * Return: The number of bytes stored to the buffer is returned.
  */
-unsigned int __ourprintf_ubase(buffer_t *output, unsigned long int num, char *base,
+unsigned int __ourprintf_ubase(buffer_t *output,
+		unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec)
 {
 	unsigned int size, res = 1;

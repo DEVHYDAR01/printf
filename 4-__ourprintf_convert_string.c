@@ -46,7 +46,8 @@ unsigned int __ourprintf_string(va_list args, buffer_t *output,
  * __ourprintf_STRING - This function will converts
  * an argument to a string andstores it
  * to a buffer contained in a struct.
- * @args: This is our variadic va_list pointing to the argument to be converted.
+ * @args: This is our variadic va_list
+ * pointing to the argument to be converted.
  * @flags: our flag modifiers.
  * @wid: our width modifier.
  * @prec: our precision modifier.
@@ -55,7 +56,8 @@ unsigned int __ourprintf_string(va_list args, buffer_t *output,
  *
  * Return: The number of bytes stored to the buffer is returned.
  *
- * Description: This the Non-printable characteres (ASCII values < 32 or >= 127)
+ * Description: This the Non-printable
+ * characteres (ASCII values < 32 or >= 127)
  * are stored as \x followed by the ASCII code value in hex.
  */
 unsigned int __ourprintf_STRING(va_list args, buffer_t *output,

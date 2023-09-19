@@ -3,7 +3,8 @@
  * __ourprintf_hexadecimal - This function will convert an
  * unsigned int argument to hex using abcdef
  * and stores it to a buffer contained in a struct.
- * @args: This is the variadic va_list pointing to the argument to be converted.
+ * @args: This is the variadic va_list
+ * pointing to the argument to be converted.
  * @flags: our Flag modifiers.
  * @wid: our width modifier.
  * @prec: our precision modifier.
