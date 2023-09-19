@@ -16,7 +16,7 @@ int __ourprintf_binary(unsigned int num, int imprint);
 int _printf(const char *format, ...);
 int _x(unsigned int num, int imprint, int uppercase);
 int __ourprintf_octal(unsigned int num, int imprint);
-int __ourprintf_unsigned(unsigned int num, int imprint);
+int __ourprintf_unsignedint(unsigned int num, int imprint);
 int __ourprintf_reverse(va_list args, int imprint);
 int __ourprintf_pointer(va_list args, int imprint);
 #endif

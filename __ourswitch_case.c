@@ -36,7 +36,7 @@ int selector(const char *format, va_list args, int imprint)
 			imprint = __ourprintf_octal(va_arg(args, unsigned int), imprint);
 			break;
 		case 'u':
-			imprint = __ourprintf_unsigned(va_arg(args, unsigned int), imprint);
+			imprint = __ourprintf_unsignedint(va_arg(args, unsigned int), imprint);
 			break;
 		case 'r':
 			imprint = __ourprintf_reverse(args, imprint);
