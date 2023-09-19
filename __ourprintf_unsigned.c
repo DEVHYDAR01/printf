@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * __ourprintf_unsigned - This function will print an unsigned number
+ * __ourprintf_unsignedint - This function will print an unsigned number
  * @num: number of arguements to be printed
  * @imprint: the printed characters to be
  * Return: printed charcaters will return
