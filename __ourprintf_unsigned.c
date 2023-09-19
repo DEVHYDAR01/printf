@@ -5,7 +5,7 @@
  * @imprint: the printed characters to be
  * Return: printed charcaters will return
  */
-int __ourprintf_unsigned(unsigned int num, int imprint)
+int __ourprintf_unsignedint(unsigned int num, int imprint)
 {
 	int digs = 0;
 	unsigned int temp = num;
