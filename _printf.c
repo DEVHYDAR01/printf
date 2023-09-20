@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * cleanup - This function will Peform cleanup operations for _printf.
+ * cleanup - This functions will Peform cleanup operations for _printf.
  * @args: This are variadic va_list to the arguments provided to _printf.
  * @output: This is the buffer_t struct.
  */
@@ -12,7 +12,7 @@ void cleanup(va_list args, buffer_t *output)
 }
 
 /**
- * run_printf - This function will read the format string for the _printf.
+ * run_printf - This function will reads the format string for the _printf.
  * @format: Character string to print - may contain directives.
  * @output: This will be the  buffer_t struct to a buffer.
  * @args: This are the variadic va_list of arguments.
