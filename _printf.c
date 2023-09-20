@@ -16,7 +16,6 @@ void cleanup(va_list args, buffer_t *output)
  * @format: Character string to print - may contain directives.
  * @output: This will be the  buffer_t struct to a buffer.
  * @args: This are the variadic va_list of arguments.
- * function int: it is here
  *
  * Return: The number of characters stored to be the output.
  */
@@ -25,9 +24,9 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 	int i, wid, prec, res = 0;
 	char tmp;
 	unsigned char flags, len;
+	unsigned int ans;
 	unsigned int (*f)(va_list, buffer_t *,
 			unsigned char, int, int, unsigned char);
-
 	for (i = 0; *(format + i); i++)
 	{
 		len = 0;
@@ -54,7 +53,7 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 			}
 		}
 		res = res + __ourprintf_memcpy(output, (format + i), 1);
-		i += (len != 0) ? 1 : 0;
+		i = i + (len != 0) ? 1 : 0;
 	}
 	cleanup(args, output);
 	return (res);

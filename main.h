@@ -18,7 +18,7 @@
 #define ZERO_FLAG ((flags >> 3) & 1)
 #define NEG_FLAG ((flags >> 4) & 1)
 
-/* Length Modifier Macros */
+/* the length Modifier Macros */
 #define SHORT 1
 #define LONG 2
 
