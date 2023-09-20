@@ -32,19 +32,21 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 	if (prec <= 0 && NEG_FLAG == 0) /* Handle width  */
 	{
 		if (d == LONG_MIN)
-			count = count + 19;
+			count +=  19;
 		else
 		{
 			for (copy = (d < 0) ? -d : d; copy > 0; copy /= 10)
 				count++;
 		}
-		count = count + (d == 0) ? 1 : 0;
-		count = count + (d < 0) ? 1 : 0;
-		count = count + (PLUS_FLAG == 1 && d >= 0) ? 1 : 0;
-		count = count + (SPACE_FLAG == 1 && d >= 0) ? 1 : 0;
+		count += (d == 0) ? 1 : 0;
+		count += (d < 0) ? 1 : 0;
+		count += (PLUS_FLAG == 1 && d >= 0) ? 1 : 0;
+		count += (SPACE_FLAG == 1 && d >= 0) ? 1 : 0;
+
 		/*  our handler plus flag when zero flag is active */
 		if (ZERO_FLAG == 1 && PLUS_FLAG == 1 && d >= 0)
 			res = res + __ourprintf_memcpy(output, &plus, 1);
+
 		/* our print negative sign when zero flag is active */
 		if (ZERO_FLAG == 1 && d < 0)
 			res = res + __ourprintf_memcpy(output, &neg, 1);
@@ -55,6 +57,7 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 	/* Print negative sign if zero flag is not active */
 	if (ZERO_FLAG == 0 && d < 0)
 		res = res + __ourprintf_memcpy(output, &neg, 1);
+
 	/* Handle plus flag if zero flag is not active */
 	if (ZERO_FLAG == 0 && (PLUS_FLAG == 1 && d >= 0))
 		res = res + __ourprintf_memcpy(output, &plus, 1);
@@ -62,6 +65,7 @@ unsigned int __ourprintf_decimal(va_list args, buffer_t *output,
 		res = res + __ourprintf_sbase(output, d, "0123456789",
 				flags, 0, prec);
 	res = res + __ourprintf_neg_width(output, res, flags, wid);
+
 	return (res);
 }
 /**

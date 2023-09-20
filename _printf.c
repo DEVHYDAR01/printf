@@ -53,7 +53,7 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 			}
 		}
 		res = res + __ourprintf_memcpy(output, (format + i), 1);
-		i = i + (len != 0) ? 1 : 0;
+		i += (len != 0) ? 1 : 0;
 	}
 	cleanup(args, output);
 	return (res);

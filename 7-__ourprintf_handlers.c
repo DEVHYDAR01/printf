@@ -93,7 +93,7 @@ int __ourprintf_handler_width(va_list args, const char *modifier, char *index)
 		}
 
 		value *= 10;
-		value = value + (*modifier - '0');
+		value += (*modifier - '0');
 		modifier++;
 	}
 
@@ -143,7 +143,7 @@ int __ourprintf_handler_precision(va_list args,
 		}
 
 		value *= 10;
-		value = value + (*modifier - '0');
+		value += (*modifier - '0');
 		modifier++;
 	}
 
