@@ -1,18 +1,57 @@
-# 0x11. C - printf
+## printf()
+The printf project is a collaboration between Devhydar and Joseph Njoroge students of Software Engineering at ALX, were a function named "_printf" imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
 
-## Authorized functions and macros
----
-- write (man 2 write)
-- malloc (man 3 malloc)
-- free (man 3 free)
-- va_start (man 3 va_start)
-- va_end (man 3 va_end)
-- va_copy (man 3 va_copy)
-- va_arg (man 3 va_arg)
+_printf() is a function that performs formatted output conversion and print data. Its prototype is the following:
 
-## Synopsis
-This is a simple implementation of printf function that formats and prints data
+	int _printf(const char *format, ...)
 
-## Description
-The _printf() function produces output according to a format which is described
-below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
+Where **format** contains the string that is printed. As _printf() is variadic function, it can receives n arguments that replace by n tags written inside the string.
+
+The format tags prototype is the following:
+
+	%[flags][length]specifier
+	
+If the program runs successfully, the **return value** is the amount of chars printed.
+	
+| Specifier | Output |
+| ------------- | ------------- |
+| c  | Character  |
+| d or i | Signed decimal integer |
+| s  | String of characters  |
+| b  | Signed binary  |
+| o  | Signed octal  |
+| u  | Unsigned integer  |
+| x  | Unsigned hexadecimal  |
+| X  | Unsigned hexadecimal (uppercase)  |
+| p  | Pointer address  |
+| r  | Reverse string of characters |
+| R  | ROT13 translation of string |
+| S  | String with special chars replaced by their ASCII value  |
+| %  | Character  |
+
+| Flags | Description | Specifiers |
+| ------------- | ------------- | ------------- | 
+| +  | Prints a plus sign (+) when the argument is a positive number. In other case, prints a minus sign (-). | i, d |
+| (space) | Prints a blank space if the argument is a positive number | i, d |
+| #  | Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero | o, x, X |
+
+| Length | Description | Specifiers |
+| ------------- | ------------- | ------------- | 
+| l | Prints a long int or unsigned long int | i, d, o, u, x and X |
+| h | Prints a short int or unsigned short int | i, d, o, u, x and X |
+
+------------
+
+# Log change
+
+## Version 5.0
+- Released version 5.0
+- All code is kinda aunty betty compliant
+- The manual page is present
+
+
+
+# Authors
+
+- DEVHYDAR - [Github](http://github.com/DEVHYDAR)
+- JOESEPH NGOROJE - [Github](https://github.com/Joseph Njoroge
