@@ -1,0 +1,54 @@
+[4m_PRINTF[24m(2)                   __ourprintf man page                   [4m_PRINTF[24m(2)
+
+[1mNAME[0m
+       _printf - print info and format
+
+[1mSYNOPSIS[0m
+       [1mprintf FORMAT [ARGUMENT]...[0m
+
+[1mDESCRIPTION[0m
+       Prints ARGUMENT(s) based on FORMAT
+
+       If  format  includes format specifiers (subsequences beginning with %),
+       the additional arguments following format are formatted and inserted in
+       the resulting string replacing their respective specifiers.
+
+       _printf will also take an indefinite amount of arguments.
+
+       Example: _printf("%s", text);
+
+       In the Example print the value of text with %s give the format of text.
+
+       [1mThe conversion specifiers[0m
+
+
+       %c     - prints character.
+
+       %s     - prints string.
+
+       %%     - prints percentage symbol.
+
+       %d     - prints decimal.
+
+       %i     - prints integer number.
+
+       %b     - prints binary representation.
+
+       %p     - prints pointer.
+
+       %o     - prints octal representation.
+
+       %r     - prints string in reverse.
+
+       %u     - prints unsigned integer.
+
+       %x     - prints hexadecimal representation.
+
+
+[1mSEE ALSO[0m
+       [4mprintf[24m [4m(3)[0m
+
+[1mAUTHOR[0m
+       DEVHYDAR https://DEVHYDAR01.github.io Joeseph Njoroje
+
+0x11                           20 september 2023                    [4m_PRINTF[24m(2)
