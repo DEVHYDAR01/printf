@@ -54,4 +54,4 @@ If the program runs successfully, the **return value** is the amount of chars pr
 # Authors
 
 - DEVHYDAR - [Github](http://github.com/DEVHYDAR)
-- JOESEPH NGOROJE - [Github](https://github.com/JosephNjoroge)
+- JOESEPH NGOROJE - [Github](https://github.com/Joseph-Njoro)
